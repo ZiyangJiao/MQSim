@@ -1,3 +1,8 @@
 MQSim
 build/
 
+.idea/misc.xml
+.idea/modules.xml
+.idea/MQSim.iml
+.idea/vcs.xml
+src/.DS_Store

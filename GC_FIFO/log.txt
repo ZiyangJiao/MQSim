@@ -1,0 +1,14 @@
+Test1: Capacity = 256GB; OP = 0.7
+Request from host: 8192000000 (8192 * 1000000)
+Total_GC_Executions="50614"
+Average_Page_Movement_For_GC="235.981527"
+GC writes: 50614 * 235.981527 * 8192 = 97844994048
+A_FIFO = (8192000000 + 97844994048) / 8192000000 = 13
+
+Test1: Capacity = 256GB; OP = 0.75
+Request from host: 8192000000 (8192 * 1000000)
+Total_GC_Executions="48948"
+Average_Page_Movement_For_GC="236.021860"
+GC writes: 48948 * 236.021860 * 8192 = 94631755776
+A_FIFO = (8192000000 + 94631755776) / 8192000000 = 11.5
+

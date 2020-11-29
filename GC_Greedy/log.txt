@@ -1,0 +1,12 @@
+Note: In the simulator, "OP" is equvalent with the term "S_f" in the paper.
+In Simulater: Overprovisioning_Ratio: the ratio of reserved storage space with respect to the available flash storage capacity. Range = {all positive double precision values}.
+In Paper: spare factor S_f = (T - U) / T
+
+According to the paper: S_f = 0.07, A should be 6.623 (Uniform workload, Greedy GC)
+
+Test: Np = 64 (same with paper)
+Request from host: 8192000000 (8192 * 1000000)
+Total_GC_Executions="27266"
+Average_Page_Movement_For_GC="26.310790"
+GC Writes = 27266 * 26.310790 * 8192 = 5876858881.14688
+A_Greedy = (8192000000 + 5876858881.14688) / 8192000000 = 1.7

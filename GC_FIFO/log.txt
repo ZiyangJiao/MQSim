@@ -1,11 +1,17 @@
-Test1: Capacity = 256GB; OP = 0.7
+Note: In the simulator, "OP" is equvalent with the term "S_f" in the paper.
+In Simulater: Overprovisioning_Ratio: the ratio of reserved storage space with respect to the available flash storage capacity. Range = {all positive double precision values}.
+In Paper: spare factor S_f = (T - U) / T
+
+According to the paper: S_f = 0.07, A should be 7.318 (Uniform workload, FIFO GC)
+
+Test0: Capacity = 256GB; OP = 0.07
 Request from host: 8192000000 (8192 * 1000000)
 Total_GC_Executions="50614"
 Average_Page_Movement_For_GC="235.981527"
-GC writes: 50614 * 235.981527 * 8192 = 97844994048
+GC writes: 50614(GC Executions) * 235.981527(average page moved) * 8192(page size) = 97844994048
 A_FIFO = (8192000000 + 97844994048) / 8192000000 = 13
 
-Test1: Capacity = 256GB; OP = 0.75
+Test1: Capacity = 256GB; OP = 0.075
 Request from host: 8192000000 (8192 * 1000000)
 Total_GC_Executions="48948"
 Average_Page_Movement_For_GC="236.021860"
